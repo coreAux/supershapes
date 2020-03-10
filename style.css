@@ -6,5 +6,30 @@ body {
 }
 
 div {
-/*    border: 1px #000 solid;*/
+    border: 2px #000 solid;
+}
+
+.w-200 {
+    width: 200%;
+}
+
+.bg-blue {
+    background-color: #77ebfd;
+}
+
+.bg-red {
+    background-color: #fc3035;
+}
+
+.bg-purple {
+    background-color: #cd89fc;
+}
+
+.bg-yellow {
+    background-color: #fff636;
+}
+
+.tunnel circle {
+    /* By default elements transform from their top left corner so here we tell our circles to transform from the center */
+    transform-origin: center;
 }
