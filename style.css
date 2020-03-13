@@ -6,7 +6,41 @@ body {
 }
 
 div {
-    border: 2px #000 solid;
+    border: 0px #000 solid;
+}
+
+/* Using the inset keyword we can put shadows inside of elements */
+.box-border {
+    box-shadow: inset 0 0 0 4px #000;
+}
+
+.page {
+    position: relative;
+}
+
+.page:after,
+.page:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background-color: #000;
+    z-index: 3;
+}
+
+.page:before {
+    top: 0;
+}
+
+.page:after {
+    bottom: 0;
+}
+
+.conveyor-belt,
+.page {
+    border-left: solid 4px #000;
+    border-right: solid 4px #000;
 }
 
 .w-200 {
@@ -14,22 +48,36 @@ div {
 }
 
 .bg-blue {
-    background-color: #77ebfd;
+    background-color: #7cebfc;
 }
 
 .bg-red {
-    background-color: #fc3035;
+    background-color: #f9343d;
 }
 
 .bg-purple {
-    background-color: #cd89fc;
+    background-color: #ca8cf9;
 }
 
 .bg-yellow {
-    background-color: #fff636;
+    background-color: #fff44c;
 }
 
-.tunnel circle {
+.tunnel circle,
+#crosses path,
+.squares rect {
     /* By default elements transform from their top left corner so here we tell our circles to transform from the center */
     transform-origin: center;
+}
+
+.squares rect {
+    transform-box: fill-box;
+    transform: translateX(-50%);
+    transform: translateY(-50%);
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background-color: #000;
 }
